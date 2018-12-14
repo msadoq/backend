@@ -36397,5 +36397,22 @@
         ]
       }
     }
+  ],
+  "templates": [
+    {
+      "id": 1,
+      "uid": "456456DFGDFGD1231231213",
+      "texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed consequat ante. Vivamus risus risus, mollis nec enim id, lacinia venenatis dui. In quam neque, viverra eu eros fringilla, eleifend vestibulum ipsum. Duis faucibus ex nibh, id maximus nulla pharetra vel. Mauris luctus urna vitae metus condimentum faucibus. In sodales bibendum diam, vitae facilisis mauris efficitur fringilla. In sem sapien, egestas ut dapibus nec, accumsan sit amet nisi. Nunc ac sem eget velit molestie mollis. Integer consequat posuere viverra. Proin quis nunc a sem elementum pellentesque commodo sit amet nulla.\n\nSuspendisse sed varius nibh, mollis ornare magna. Vestibulum tempus rhoncus diam dapibus dictum. Donec fermentum urna rhoncus libero accumsan, vitae scelerisque sapien vestibulum. Nulla luctus lobortis maximus. Mauris tincidunt libero eros, ac malesuada lacus congue sit amet. Praesent ac viverra purus. In accumsan risus ut diam rutrum consectetur. Pellentesque id nunc in lacus finibus lacinia vel sit amet libero. Ut quam elit, commodo porta lorem id, pharetra scelerisque est. Donec non elementum enim, id facilisis nisi.\n\nDonec semper purus enim, vel condimentum ex gravida nec. Maecenas dapibus id tortor in hendrerit. Nunc vitae bibendum purus, nec euismod orci. Sed id pellentesque ante. Donec imperdiet dapibus quam at pretium. In luctus posuere facilisis. Phasellus pharetra scelerisque orci non consequat. Cras tristique augue non felis posuere, eu placerat metus condimentum. Cras a interdum ante, nec rutrum nunc. Curabitur blandit fermentum tortor id gravida. In dictum posuere ipsum quis vestibulum. Integer eu velit orci. Sed vel venenatis elit. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla non orci in mi varius imperdiet in ac metus."
+    },
+    {
+      "id": 2,
+      "uid": "ZERZER354564564",
+      "texte": "Phasellus at sodales orci. Ut molestie nisi in dui pretium cursus. Nullam et lorem et nibh tempus hendrerit. Ut egestas risus ante, in lacinia dui porta pellentesque. Mauris erat leo, varius id lacus in, pretium aliquam elit. Integer placerat quam lectus, ut gravida orci tincidunt eget. Aenean molestie sit amet elit nec imperdiet. In id molestie quam, quis feugiat erat. Morbi sagittis est vel erat tempus condimentum sed non massa. Mauris varius porttitor elit at volutpat. Quisque bibendum scelerisque elit quis molestie."
+    },
+    {
+      "id": 3,
+      "uid": "78978972342DFGDFGDFG",
+      "texte": "Nulla ornare ligula ut mattis tempus. Fusce mollis libero vitae malesuada semper. Nulla eget aliquet mauris. Sed egestas nunc vitae orci ullamcorper tempus. Sed pulvinar tempor ligula non mollis. Proin id consectetur est. Pellentesque cursus quam vel sapien commodo, et finibus urna imperdiet. Donec risus mi, viverra sed risus sed, laoreet consectetur sapien. Sed tincidunt lobortis enim. Etiam vulputate cursus sodales. Phasellus et risus in nunc blandit efficitur in non turpis. Mauris sapien felis, fringilla eu commodo id, viverra sit amet dui. Fusce fermentum, erat quis dapibus aliquet, orci enim aliquet urna, eu molestie erat quam nec enim."
+    }
   ]
 }

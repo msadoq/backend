@@ -3,20 +3,19 @@ package demo.reactAdmin.crud.services;
 
 import demo.reactAdmin.auth.PasswordEncoderProvider;
 import demo.reactAdmin.crud.entities.Group;
-import demo.reactAdmin.crud.entities.PlatformUser;
-import demo.reactAdmin.crud.repos.ClientRepository;
-import demo.reactAdmin.crud.repos.ExampleRepository;
-import demo.reactAdmin.crud.repos.GroupRepository;
-import demo.reactAdmin.crud.repos.UserRepository;
+import demo.reactAdmin.crud.repos.*;
 import demo.reactAdmin.crud.utils.ApiHandler;
-import reactAdmin.rest.utils.JSON;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import reactAdmin.rest.utils.JSON;
 
 import javax.servlet.ServletContext;
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
 
 @Service
@@ -42,7 +41,6 @@ public class DataInitService {
 
     @Autowired
     ApiHandler apiHandler;
-
 
     public void init() {
 
@@ -126,15 +124,13 @@ public class DataInitService {
         String token = apiHandler.authenticate("demo", "demo");
         Map<String, String> headers = new HashMap<>();
         headers.put("X-Authorization", "Bearer "+token);
-        String[] keys = {"categories", "customers", "products", "commands", "reviews"};
-
-
+        String[] keys = {"categories", "customers", "products", "commands", "reviews", "templates"};
 
         for (String key : keys) {
             JSONArray objects = ((JSONArray)jsonObj.get(key));
             for (int i = 0; i < objects.length(); i++) {
                 JSONObject object = objects.getJSONObject(i);
-                incrementValue(object, Arrays.asList("id", "product_id", "category_id", "customer_id", "command_id"));
+                incrementValue(object, Arrays.asList("id", "product_id", "category_id", "customer_id", "command_id","id"));
                 apiHandler.sendPost("http://localhost:8080/api/v1/"+key+"/",object.toString(), headers);
             }
         }
