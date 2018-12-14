@@ -16,7 +16,7 @@ public class Product {
     public float price;
     public String thumbnail;
     public String iamge;
-    @Lob @Basic(fetch = FetchType.EAGER)
+    @Basic(fetch = FetchType.EAGER)
     @Column(length=1000)
     public String description;
     public int stock;

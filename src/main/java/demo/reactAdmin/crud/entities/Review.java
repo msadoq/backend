@@ -24,7 +24,7 @@ public class Review {
     @ManyToOne(cascade = {CascadeType.DETACH})
     public Customer customerId;
 
-    @Lob @Basic(fetch = FetchType.EAGER)
+    @Basic(fetch = FetchType.EAGER)
     @Column(length=1000)
     public String comment;
 
