@@ -11,11 +11,10 @@ public class Template {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer id;
 
-    @Column(name = "uid",columnDefinition = "text")
+    @Column(name = "uid",columnDefinition = "text", unique = true)
     public String uid;
 
-
-    @Column(name = "texte", columnDefinition = "text", length=1000)
+    @Column(name = "texte", columnDefinition = "text")
     public String texte;
 
     public boolean published = true;

@@ -130,7 +130,7 @@ public class DataInitService {
             JSONArray objects = ((JSONArray)jsonObj.get(key));
             for (int i = 0; i < objects.length(); i++) {
                 JSONObject object = objects.getJSONObject(i);
-                incrementValue(object, Arrays.asList("id", "product_id", "category_id", "customer_id", "command_id","template_id"));
+                incrementValue(object, Arrays.asList("id", "product_id", "category_id", "customer_id", "command_id"));
                 apiHandler.sendPost("http://localhost:8080/api/v1/"+key+"/",object.toString(), headers);
             }
         }
