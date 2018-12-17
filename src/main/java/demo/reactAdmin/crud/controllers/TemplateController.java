@@ -28,6 +28,13 @@ public class TemplateController {
         return temp.save(template);
     }
 
+    @RequestMapping(value = "templates/{id}/published/{value}", method = RequestMethod.POST)
+    public Template publishedUpdate(@PathVariable int id, @PathVariable boolean value) {
+        Template template = temp.findOne(id);
+        template.published = value;
+        return temp.save(template);
+    }
+
     @RequestMapping(value = "templates/{id}", method = RequestMethod.GET)
     public Template getById(@PathVariable Integer id) {
         return temp.findOne(id);
