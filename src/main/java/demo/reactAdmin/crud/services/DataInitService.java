@@ -124,13 +124,13 @@ public class DataInitService {
         String token = apiHandler.authenticate("demo", "demo");
         Map<String, String> headers = new HashMap<>();
         headers.put("X-Authorization", "Bearer "+token);
-        String[] keys = {"categories", "customers", "products", "commands", "reviews", "templates"};
+        String[] keys = {"categories", "customers", "products", "commands", "reviews", "templates", "notificationsdef"};
 
         for (String key : keys) {
             JSONArray objects = ((JSONArray)jsonObj.get(key));
             for (int i = 0; i < objects.length(); i++) {
                 JSONObject object = objects.getJSONObject(i);
-                incrementValue(object, Arrays.asList("id", "product_id", "category_id", "customer_id", "command_id","id"));
+                incrementValue(object, Arrays.asList("id", "product_id", "category_id", "customer_id", "command_id","template_id"));
                 apiHandler.sendPost("http://localhost:8080/api/v1/"+key+"/",object.toString(), headers);
             }
         }
