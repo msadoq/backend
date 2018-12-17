@@ -11,8 +11,8 @@ public class Template {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer id;
 
-    @Column(name = "uid",columnDefinition = "text", unique = true)
-    public String uid;
+    @Column(name = "templateuid",columnDefinition = "text", unique = true)
+    public String templateuid;
 
     @Column(name = "texte", columnDefinition = "text")
     public String texte;

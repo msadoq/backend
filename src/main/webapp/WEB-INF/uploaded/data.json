@@ -36401,28 +36401,28 @@
   "templates": [
     {
       "id": 1,
-      "uid": "456456DFGDFGD1231231213",
+      "templateuid": "456456DFGDFGD1231231213",
       "texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas imperdiet quam felis, ac dictum neque pharetra eu. Sed ultrices, purus eu faucibus viverra, erat odio aliquet tellus, sed tempus ligula nisi at felis. Praesent blandit molestie elementum. Mauris ligula ex, dignissim sit amet facilisis in, commodo quis velit. Nulla venenatis tincidunt ex, ac ultricies odio vulputate vel. Etiam malesuada interdum ante, nec venenatis mauris. Fusce in eleifend risus. Phasellus pellentesque semper odio eget blandit. Nam congue ipsum a diam placerat congue"
     },
     {
       "id": 2,
-      "uid": "456456DFGDFGD1231231213",
+      "templateuid": "456456DFGDFGD1231231213",
       "texte": "Donec a arcu ultricies, laoreet nulla suscipit, tempus sem. Nam nisi eros, tempor vel erat non, elementum malesuada velit. Integer sagittis tincidunt lorem, ut condimentum urna ornare eu. Maecenas venenatis cursus turpis ut mollis. Integer quis arcu vel tellus aliquet aliquam non ac est. Vestibulum ut mauris ultricies, maximus orci in, mollis libero. Etiam facilisis dapibus viverra. Vestibulum a vulputate dolor. Duis viverra ex et urna bibendum pharetra. Mauris eget elit massa. Curabitur vel ullamcorper libero, feugiat viverra velit. Nunc malesuada magna tortor, eget facilisis eros porttitor quis"
     },
     {
       "id": 3,
-      "uid": "78978972342DFGDFGDFG",
+      "templateuid": "78978972342DFGDFGDFG",
       "texte": "Praesent posuere vehicula ante, vel scelerisque nulla lacinia eget. Sed efficitur felis diam, ac interdum nisl ullamcorper vel. Sed condimentum mi eu erat convallis feugiat. Phasellus eget pulvinar tellus. Quisque sed purus a dolor tristique lacinia et tempor eros. Sed suscipit eros eros, nec maximus augue tempor sit amet. Integer non molestie arcu. Mauris ut semper est. Nulla tristique vehicula lacus, eu feugiat nisi porta vitae. Fusce ullamcorper est est, ac tempor nibh elementum eu. Proin volutpat at tortor sit amet faucibus. Mauris egestas vulputate dolor quis sollicitudin. Integer a urna sed purus placerat iaculis. Integer non purus ac mauris posuere consectetur congue vel sapien"
     }
   ],
   "notificationsdef": [
     {
       "id": 1,
-      "uid": "HGHFGHFG456456",
+      "notifdefuid": "HGHFGHFG456456",
       "object": "object1",
       "from" : "jonedoe@gmail.com",
       "to": "suzannelenglene@gmail.com",
-      "template_id": 1
+      "template_id": 3
       }
   ]
 }
