@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+
 @Where(clause="published=true")
 @Entity
 public class Template {
@@ -16,6 +19,10 @@ public class Template {
 
     @Column(name = "texte", columnDefinition = "text")
     public String texte;
+
+    @OneToMany(cascade = {CascadeType.ALL})
+    public Set<NotificationDef> notificationsdef = new HashSet<>();
+
 
     public boolean published = true;
 

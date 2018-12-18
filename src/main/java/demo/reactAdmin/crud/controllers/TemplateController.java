@@ -1,5 +1,6 @@
 package demo.reactAdmin.crud.controllers;
 
+import demo.reactAdmin.crud.entities.NotificationDef;
 import demo.reactAdmin.crud.entities.Template;
 import demo.reactAdmin.crud.repos.TemplateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,12 +20,18 @@ public class TemplateController {
 
     @RequestMapping(value = "templates", method = RequestMethod.POST)
     public Template create(@RequestBody Template template) {
+        for (NotificationDef nd : template.notificationsdef) {
+            nd.templateId = temp.findOne(nd.id);
+        }
         return temp.save(template);
     }
 
     @RequestMapping(value = "templates/{id}", method = RequestMethod.PUT)
     public Template update(@RequestBody Template template, @PathVariable Integer id) {
         template.id = id;
+        for (NotificationDef nd : template.notificationsdef) {
+            nd.templateId = temp.findOne(nd.id);
+        }
         return temp.save(template);
     }
 
