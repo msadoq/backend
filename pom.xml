@@ -142,6 +142,11 @@
             <artifactId>json</artifactId>
             <version>20160810</version>
         </dependency>
+        <!--JSON/Object mapping-->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.github.zifnab87</groupId>
             <artifactId>react-admin-java-rest</artifactId>
