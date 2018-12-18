@@ -11,7 +11,7 @@ public class NotificationDef {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer id;
 
-    @Column(name = "notifdefuid",columnDefinition = "text")
+    @Column(name = "notifdefuid",columnDefinition = "text", unique = true)
     public String notifdefuid;
 
     @Column(name = "object_notif_def", columnDefinition = "text")
