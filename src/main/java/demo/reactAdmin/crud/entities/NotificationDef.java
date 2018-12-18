@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.Where;
 import javax.persistence.*;
+import java.util.List;
 import java.util.Map;
 
 @Entity
@@ -22,8 +23,9 @@ public class NotificationDef {
     @Column(name = "from_notif_def", columnDefinition = "text")
     public String from;
 
-    @Column(name = "to_notif_def", columnDefinition = "text")
-    public String to;
+    @ElementCollection
+    @Column(name = "to_notif_def")
+    public List<String> to;
 
     public boolean published = true;
 

@@ -36421,7 +36421,12 @@
       "notifdefuid": "HGHFGHFG456456",
       "object": "object1",
       "from" : "jonedoe@gmail.com",
-      "to": "suzannelenglene@gmail.com",
+      "to": [
+        "suzannelenglene@gmail.com",
+        "toto@yahoo.fr",
+        "titi@gmail.com",
+        "dforlan@gmail.com"
+        ],
       "kvp": {
         "key1": "val1",
         "key2": "val2",
