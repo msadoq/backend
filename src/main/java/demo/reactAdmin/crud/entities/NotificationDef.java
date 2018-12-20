@@ -1,11 +1,12 @@
 package demo.reactAdmin.crud.entities;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import org.hibernate.annotations.Type;
 import org.hibernate.annotations.Where;
+
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
+import java.util.Set;
 
 @Entity
 @Where(clause="published=true")
@@ -32,8 +33,8 @@ public class NotificationDef {
     @ManyToOne(cascade = {CascadeType.DETACH})
     public Template templateId;
 
-    @Type(type = "JsonDataUserType")
-    private Map<String, String> kvp;
+    @OneToMany(cascade = {CascadeType.ALL})
+    public Set<Parameter> parameters = new HashSet<>();
 
     public NotificationDef() {}
 
