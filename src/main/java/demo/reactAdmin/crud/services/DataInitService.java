@@ -124,7 +124,7 @@ public class DataInitService {
         String token = apiHandler.authenticate("demo", "demo");
         Map<String, String> headers = new HashMap<>();
         headers.put("X-Authorization", "Bearer "+token);
-        String[] keys = {"categories", "customers", "products", "commands", "reviews", "templates", "notificationsdef"};
+        String[] keys = {"categories", "customers", "products", "commands", "reviews", "templates", "notificationsdef", "parameters"};
 
         for (String key : keys) {
             JSONArray objects = ((JSONArray)jsonObj.get(key));
