@@ -36401,7 +36401,7 @@
   "templates": [
     {
       "id": 1,
-      "templateuid": "456456DFGDFGD1231231213",
+      "templateuid": "456456DFGDFGD1231213",
       "texte": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas imperdiet quam felis, ac dictum neque pharetra eu. Sed ultrices, purus eu faucibus viverra, erat odio aliquet tellus, sed tempus ligula nisi at felis. Praesent blandit molestie elementum. Mauris ligula ex, dignissim sit amet facilisis in, commodo quis velit. Nulla venenatis tincidunt ex, ac ultricies odio vulputate vel. Etiam malesuada interdum ante, nec venenatis mauris. Fusce in eleifend risus. Phasellus pellentesque semper odio eget blandit. Nam congue ipsum a diam placerat congue"
     },
     {
@@ -36427,12 +36427,36 @@
         "titi@gmail.com",
         "dforlan@gmail.com"
         ],
-      "kvp": {
-        "key1": "val1",
-        "key2": "val2",
-        "key3": "val3"
-      },
       "template_id": 3
-      }
+    },
+    {
+      "id": 2,
+      "notifdefuid": "HGHFGH56456",
+      "object": "object1",
+      "from" : "toto@gmail.com",
+      "to": [
+        "sdsf@gmail.com",
+        "iououi@yahoo.fr",
+        "zaznvb@gmail.com",
+        "gjkkhjkh@gmail.com"
+      ],
+      "template_id": 2
+    }
+  ],
+  "parameters": [
+    {
+      "id": 1,
+      "key": "key2",
+      "value": "val2",
+      "type": "type2",
+      "notification_def_id": 1
+    },
+    {
+      "id": 2,
+      "key": "key2",
+      "value": "val2",
+      "type": "type2",
+      "notification_def_id": 2
+    }
   ]
 }
