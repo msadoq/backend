@@ -20,10 +20,6 @@ public class Parameter {
     @Column(name = "value", columnDefinition = "varchar")
     public String value;
 
-    @ManyToOne(cascade = {CascadeType.DETACH})
-    public NotificationDef notificationDefId;
-
-
     public Parameter() {}
 
     @JsonCreator
