@@ -3,6 +3,8 @@ package demo.reactAdmin.crud.controllers;
 import demo.reactAdmin.crud.entities.NotificationDef;
 import demo.reactAdmin.crud.repos.NotificationDefRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 import reactAdmin.rest.entities.FilterWrapper;
 import reactAdmin.rest.services.FilterService;
@@ -47,11 +49,9 @@ public class NotificationDefController {
     }
 
     @RequestMapping(value = "notificationsdef", method = RequestMethod.GET)
-    public Iterable<NotificationDef> filterBy(
+    public Page<NotificationDef> filterBy(
             @RequestParam(required = false, name = "filter") String filterStr,
-            @RequestParam(required = false, name = "range") String rangeStr, @RequestParam(required = false, name = "sort") String sortStr) {
-
-        FilterWrapper wrapper = filterService.extractFilterWrapper(filterStr, rangeStr, sortStr);
-        return filterService.filterBy(wrapper, notifdef);
+            Pageable pageable) {
+        return notifdef.findAll(pageable);
     }
 }

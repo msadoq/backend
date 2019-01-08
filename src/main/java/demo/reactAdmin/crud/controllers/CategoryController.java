@@ -4,6 +4,8 @@ package demo.reactAdmin.crud.controllers;
 import demo.reactAdmin.crud.entities.Category;
 import demo.reactAdmin.crud.repos.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 import reactAdmin.rest.entities.FilterWrapper;
 import reactAdmin.rest.services.FilterService;
@@ -43,10 +45,9 @@ public class CategoryController {
     }
 
     @RequestMapping(value = "categories", method = RequestMethod.GET)
-    public Iterable<Category> filterBy(
+    public Page<Category> filterBy(
             @RequestParam(required = false, name = "filter") String filterStr,
-            @RequestParam(required = false, name = "range") String rangeStr, @RequestParam(required = false, name="sort") String sortStr) {
-        FilterWrapper wrapper = filterService.extractFilterWrapper(filterStr, rangeStr, sortStr);
-        return filterService.filterBy(wrapper, repo);
+            Pageable pageable) {
+        return repo.findAll(pageable);
     }
 }

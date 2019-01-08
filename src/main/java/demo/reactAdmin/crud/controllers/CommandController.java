@@ -7,8 +7,9 @@ import demo.reactAdmin.crud.repos.CommandRepository;
 import demo.reactAdmin.crud.repos.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import reactAdmin.rest.entities.FilterWrapper;
 import reactAdmin.rest.services.FilterService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 @RestController
 @RequestMapping("api/v1")
@@ -53,10 +54,9 @@ public class CommandController {
     }
 
     @RequestMapping(value = "commands", method = RequestMethod.GET)
-    public Iterable<Command> filterBy(
+    public Page<Command> filterBy(
             @RequestParam(required = false, name = "filter") String filterStr,
-            @RequestParam(required = false, name = "range") String rangeStr, @RequestParam(required = false, name="sort") String sortStr) {
-        FilterWrapper wrapper = filterService.extractFilterWrapper(filterStr, rangeStr, sortStr);
-        return filterService.filterBy(wrapper, repo);
+            Pageable pageable) {
+        return repo.findAll(pageable);
     }
 }

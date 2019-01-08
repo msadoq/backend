@@ -1,8 +1,11 @@
 package demo.reactAdmin.crud.controllers;
 
 import demo.reactAdmin.crud.entities.PlatformUser;
+import demo.reactAdmin.crud.entities.Template;
 import demo.reactAdmin.crud.repos.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
@@ -40,10 +43,9 @@ public class UserController {
     }
 
     @RequestMapping(value = "users", method = RequestMethod.GET)
-    public Iterable<PlatformUser> filterBy(
+    public Page<PlatformUser> filterBy(
             @RequestParam(required = false, name = "filter") String filterStr,
-            @RequestParam(required = false, name = "range") String rangeStr, @RequestParam(required = false, name="sort") String sortStr) {
-        FilterWrapper wrapper = filterService.extractFilterWrapper(filterStr, rangeStr, sortStr);
-        return filterService.filterBy(wrapper, repo);
+            Pageable pageable) {
+        return repo.findAll(pageable);
     }
 }

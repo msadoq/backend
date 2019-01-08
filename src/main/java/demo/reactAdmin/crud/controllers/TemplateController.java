@@ -1,9 +1,12 @@
 package demo.reactAdmin.crud.controllers;
 
 import demo.reactAdmin.crud.entities.NotificationDef;
+import demo.reactAdmin.crud.entities.Review;
 import demo.reactAdmin.crud.entities.Template;
 import demo.reactAdmin.crud.repos.TemplateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 import reactAdmin.rest.entities.FilterWrapper;
 import reactAdmin.rest.services.FilterService;
@@ -48,11 +51,10 @@ public class TemplateController {
     }
 
     @RequestMapping(value = "templates", method = RequestMethod.GET)
-    public Iterable<Template> filterBy(
+    public Page<Template> filterBy(
             @RequestParam(required = false, name = "filter") String filterStr,
-            @RequestParam(required = false, name = "range") String rangeStr, @RequestParam(required = false, name = "sort") String sortStr) {
-
-        FilterWrapper wrapper = filterService.extractFilterWrapper(filterStr, rangeStr, sortStr);
-        return filterService.filterBy(wrapper, temp);
+            Pageable pageable) {
+        return temp.findAll(pageable);
     }
+
 }
